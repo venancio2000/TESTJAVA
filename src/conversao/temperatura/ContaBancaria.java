@@ -44,7 +44,7 @@ public class ContaBancaria {
                 saldo -= valor;
                 System.out.println("Valor na conta atualizado: " + saldo);
             }else {
-                System.out.println("Valor diferente das opções");
+                System.out.println(" opção "+opcao +" é invalida ");
             }
         }
         System.out.println("você saiu do sistema");
