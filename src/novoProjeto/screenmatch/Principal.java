@@ -1,5 +1,8 @@
 package novoProjeto.screenmatch;
 
+import novoProjeto.screenmatch.calculos.CaculadoraDeTempo;
+import novoProjeto.screenmatch.calculos.FiltroRecomendacao;
+import novoProjeto.screenmatch.modelo.Episodio;
 import novoProjeto.screenmatch.modelo.Filme;
 import novoProjeto.screenmatch.modelo.Serie;
 
@@ -26,6 +29,33 @@ public class Principal {
         lost.setEpsodiosPorTemporadas(10);
         lost.setMinutosPorEpsodio(50);
         System.out.println("Duração para maratonar Lost:" + lost.getDuracaoEmMinutos());
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        CaculadoraDeTempo caculadoraDeTempo = new CaculadoraDeTempo();
+        caculadoraDeTempo.iclui(meuFilme);
+        caculadoraDeTempo.iclui(outroFilme);
+        caculadoraDeTempo.iclui(lost);
+        System.out.println(caculadoraDeTempo.getTempoTotal());
+
+        Episodio episodio = new Episodio();
+        episodio.setSerie(lost);
+        episodio.setNome("lost");
+        episodio.setNumero(1);
+        episodio.setTotalVisualizacao(1000);
+        System.out.println(episodio.getClassificacao());
+
+        FiltroRecomendacao filtroRecomendacao = new FiltroRecomendacao();
+
+        filtroRecomendacao.filtra(meuFilme);
+        filtroRecomendacao.filtra(episodio);
+
+
+
+
 
 
 
