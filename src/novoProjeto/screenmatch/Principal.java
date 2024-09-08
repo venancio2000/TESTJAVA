@@ -6,6 +6,8 @@ import novoProjeto.screenmatch.modelo.Episodio;
 import novoProjeto.screenmatch.modelo.Filme;
 import novoProjeto.screenmatch.modelo.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -49,9 +51,22 @@ public class Principal {
         System.out.println(episodio.getClassificacao());
 
         FiltroRecomendacao filtroRecomendacao = new FiltroRecomendacao();
-
         filtroRecomendacao.filtra(meuFilme);
         filtroRecomendacao.filtra(episodio);
+
+        var filmeDoPaulo = new Filme();
+        filmeDoPaulo.setNome("Dogville");
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList <Filme> listaDeFilme = new ArrayList<>();
+        listaDeFilme.add(filmeDoPaulo);
+        listaDeFilme.add(meuFilme);
+        listaDeFilme.add(outroFilme);
+        System.out.println("Tamanho da lista " + listaDeFilme.size());
+        System.out.println("Primeiro filme " + listaDeFilme.get(0).getNome());
+        System.out.println(listaDeFilme);
 
 
 
