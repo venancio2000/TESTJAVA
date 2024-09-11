@@ -60,6 +60,6 @@ public class Titulo {
 
     @Override
     public String toString() {
-        return getNome();
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 }
