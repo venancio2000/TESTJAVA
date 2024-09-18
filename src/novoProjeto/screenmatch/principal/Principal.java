@@ -1,4 +1,4 @@
-package novoProjeto.screenmatch;
+package novoProjeto.screenmatch.principal;
 
 import novoProjeto.screenmatch.calculos.CaculadoraDeTempo;
 import novoProjeto.screenmatch.calculos.FiltroRecomendacao;

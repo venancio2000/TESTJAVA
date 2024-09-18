@@ -1,6 +1,6 @@
 package novoProjeto.screenmatch.modelo;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -63,8 +63,9 @@ public class Titulo {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
+
     @Override
-    public String toString() {
-        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }

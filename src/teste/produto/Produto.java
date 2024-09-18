@@ -12,6 +12,9 @@ public class Produto {
     public String getNome() {
         return nome;
     }
+    public double getPreco() {
+        return preco;
+    }
 
     @Override
     public String toString() {
